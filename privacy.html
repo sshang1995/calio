@@ -15,10 +15,10 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Effective 19 September 2026</p>
+<p class="effective">Effective 21 September 2026</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Calio keeps your food logs, weight, exercise and profile on your iPhone. They are not uploaded to us, and we have no account system, no analytics and no advertising. The only thing that ever leaves your device is the photo or sentence you personally submit to the optional AI food-logging feature — and we do not keep it.</p>
+  <p><strong>The short version.</strong> Calio keeps your food logs, weight, exercise and profile on your iPhone. They are not uploaded to us, and we have no account system, no analytics and no advertising. The only things that ever leave your device are the words you type into food search, and the photo or sentence you submit to the optional AI food-logging feature — and we keep neither.</p>
 </div>
 
 <h2>Who we are</h2>
@@ -35,7 +35,7 @@
 <p>Because this data never reaches a server, we cannot see it, we cannot recover it for you, and it disappears when you delete the app. You can also export or erase it yourself at any time from within the app.</p>
 
 <h2>What leaves your device</h2>
-<p>Three things, and only in the circumstances described.</p>
+<p>Four things, and only in the circumstances described.</p>
 
 <h3>1. Optional AI food logging</h3>
 <p>If you use “Snap a Photo” or “Describe It”, the app sends what you submitted to Calio’s own server, which forwards it to <a href="https://www.anthropic.com/" rel="noopener">Anthropic</a>’s Claude API so it can be read and turned into an estimated food entry.</p>
@@ -43,14 +43,23 @@
   <li><strong>What is sent:</strong> the meal photo you took or chose, or the food description you typed or dictated, plus which meal you are logging it to.</li>
   <li><strong>What is not sent:</strong> your name, email, account, device identifier, location, weight, profile or logging history. None of it is attached to the request.</li>
   <li><strong>Retention:</strong> our server processes the request and returns the result without writing it to any database or log. Anthropic’s handling of API data is governed by their own terms; at the time of writing Anthropic does not train its models on API inputs.</li>
-  <li><strong>Avoiding it entirely:</strong> these two features are the only ones that do this, and they are optional. Searching, barcode scanning and manual entry never transmit anything.</li>
+  <li><strong>Avoiding it entirely:</strong> these two features are optional. Barcode scanning is read on your device, and foods you enter by hand or pick from your own recents and favourites never leave it.</li>
 </ul>
 
-<h3>2. Subscription checks</h3>
+<h3>2. Food search</h3>
+<p>When you search for a food, the words you type are sent to Calio’s server, which passes the query on to <a href="https://fdc.nal.usda.gov/" rel="noopener">USDA FoodData Central</a> — a public nutrition database run by the US Department of Agriculture — and returns the matching foods.</p>
+<ul>
+  <li><strong>What is sent:</strong> the search text itself, for example “oatmeal”.</li>
+  <li><strong>What is not sent:</strong> your name, email, account, device identifier, location, weight, profile or logging history. The query is not attached to you in any way.</li>
+  <li><strong>Retention:</strong> our server passes the query through and returns the result without writing it to any database or log.</li>
+  <li><strong>Why it goes through us:</strong> so the database key stays on our server instead of being embedded in the app, where anyone could extract and misuse it.</li>
+</ul>
+
+<h3>3. Subscription checks</h3>
 <p>Calio Premium is sold through Apple. When the app calls the AI feature, it attaches the signed receipt Apple issued for your subscription so our server can confirm the subscription is genuine and active before doing the work.</p>
 <p>That receipt is generated and signed by Apple. It identifies the purchase — a transaction identifier and which product was bought — not you. It carries no name, email or payment details, and we never receive your payment information: Apple handles the transaction, and Apple’s own privacy policy covers it.</p>
 
-<h3>3. Nothing else</h3>
+<h3>4. Nothing else</h3>
 <p>There is no analytics SDK, no crash reporter, no advertising SDK and no third-party tracker anywhere in the app. The app contains no third-party code beyond Apple’s own frameworks. We do not sell, rent or share data with anyone, and we do not track you across other apps or websites.</p>
 
 <h2>Apple Health</h2>
@@ -73,6 +82,7 @@
     <tr><td>Profile, goals, targets</td><td>No</td><td>App functionality</td></tr>
     <tr><td>Food, exercise, weight logs</td><td>No</td><td>App functionality</td></tr>
     <tr><td>Apple Health workouts &amp; weight</td><td>No</td><td>App functionality</td></tr>
+    <tr><td>Food search terms you type</td><td>Yes — to our server, then USDA</td><td>Finding the food you searched for</td></tr>
     <tr><td>Meal photo or description submitted to AI</td><td>Yes — to our server, then Anthropic</td><td>Estimating the food and portion</td></tr>
     <tr><td>Apple-signed subscription receipt</td><td>Yes — to our server</td><td>Confirming an active subscription</td></tr>
     <tr><td>Contact info, location, contacts, identifiers</td><td>Never collected</td><td>&mdash;</td></tr>
